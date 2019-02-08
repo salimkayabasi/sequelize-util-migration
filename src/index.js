@@ -1,7 +1,7 @@
 const Umzug = require('umzug');
 const Sequelize = require('sequelize');
 
-module.exports = async (sequelize, { path, pattern = /\.js$/, logging }) => {
+module.exports = (sequelize, { path, pattern = /\.js$/, logging }) => {
   const umzug = new Umzug({
     storage: 'sequelize',
     storageOptions: {
